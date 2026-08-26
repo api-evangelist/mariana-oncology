@@ -1,0 +1,38 @@
+generated: '2026-08-25'
+method: probed
+source: >-
+  Live unauthenticated HTTP probes of the well-known namespace on the only host
+  Mariana Oncology operates (marianaoncology.com). Every path returned 404 with the
+  Gatsby SPA 404 shell — a recorded absence, not a document. No WellKnown or
+  SecurityTxt pointer is emitted in apis.yml because nothing was served.
+note: >-
+  Mariana Oncology, a Novartis company, is a preclinical-stage radiopharmaceutical
+  developer with a single 23-page marketing site and no API host, so there is no second
+  host to probe. api./developer./docs./portal./data.marianaoncology.com are all NXDOMAIN.
+hosts:
+- host: marianaoncology.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null

@@ -1,8 +1,16 @@
 aid: mariana-oncology
 name: Mariana Oncology
-description: 'Mariana Oncology is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Mariana Oncology, a Novartis company, is a Watertown, Massachusetts biotechnology
+  company developing precision radioligand therapies (RLTs) — targeted radiopharmaceuticals
+  that deliver alpha- and beta-emitting radioisotopes selectively to tumor cells while
+  sparing healthy tissue. Its pipeline pursues solid-tumor targets including DLL3-expressing
+  small cell lung cancer (MC-339), alongside breast and prostate programs, and it operates
+  a Radioligand Therapy Innovation Center of Excellence for radiochemistry, isotope handling
+  and clinical supply. Founded in 2020 and acquired by Novartis in May 2024, Mariana Oncology
+  is a therapeutics developer, not a software vendor: it publishes no developer program,
+  no public API, and no machine-readable interface of any kind.'
 url: https://raw.githubusercontent.com/api-evangelist/mariana-oncology/refs/heads/main/apis.yml
+image: https://marianaoncology.com/mariana-og-image.png
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
@@ -12,6 +20,14 @@ created: '2026-08-25'
 modified: '2026-08-25'
 tags:
 - Company
+- Biotechnology
+- Pharmaceuticals
+- Oncology
+- Radiopharmaceuticals
+- Radioligand Therapy
+- Life Sciences
+- Healthcare
+- Clinical Research
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +35,52 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/mariana-oncology-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/mariana-oncology_stock/
+  url: https://marianaoncology.com/
+- type: Blog
+  url: https://marianaoncology.com/news/
+- type: Contact
+  url: https://marianaoncology.com/contact/
+- type: TermsOfService
+  url: https://marianaoncology.com/terms-of-use/
+- type: PrivacyPolicy
+  url: https://marianaoncology.com/privacy-statement/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/marianaoncology
+- type: ParentCompany
+  name: Novartis AG
+  url: https://www.novartis.com/
+- type: ParentCompanyProfile
+  name: Novartis in the API Evangelist Network
+  url: https://github.com/api-evangelist/novartis
+- type: AcquisitionAnnouncement
+  name: Mariana Oncology to be Acquired by Novartis
+  url: https://marianaoncology.com/news/mariana-oncology-to-be-acquired-by-novartis-to-advance-precision-radiopharmaceuticals-to-treat-cancer/
+x-enrichment:
+  date: '2026-08-25'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Mariana Oncology, a Novartis company, is a preclinical-stage radioligand-therapy
+    developer whose entire web presence is a 23-URL Gatsby marketing site (sitemap-0.xml)
+    with no developer, docs or API section; api./developer./docs./portal.marianaoncology.com
+    are NXDOMAIN, there is no GitHub organization under any spelling of the name, and every
+    contract-discovery path on the one live host returns the site's 404 shell.
+  evidence:
+  - url: https://marianaoncology.com/openapi.json
+    status: 404
+  - url: https://marianaoncology.com/.well-known/agent-card.json
+    status: 404
+  - url: https://marianaoncology.com/graphql
+    status: 404
+  - url: https://marianaoncology.com/sitemap-0.xml
+    status: 200
+  - url: https://api.github.com/orgs/mariana-oncology
+    status: 404
+  checked: '2026-08-25'
