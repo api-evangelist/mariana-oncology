@@ -10,6 +10,17 @@ description: 'Mariana Oncology, a Novartis company, is a Watertown, Massachusett
   is a therapeutics developer, not a software vendor: it publishes no developer program,
   no public API, and no machine-readable interface of any kind.'
 url: https://raw.githubusercontent.com/api-evangelist/mariana-oncology/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://marianaoncology.com/mariana-og-image.png
 x-type: company
 x-source: harvest:secondary-market
